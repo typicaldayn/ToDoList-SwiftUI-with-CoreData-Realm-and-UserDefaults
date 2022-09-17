@@ -9,13 +9,8 @@ import Foundation
 import RealmSwift
 
 class RealmToDoObject: Object, ToDoObject {
+    
     @Persisted var id: UUID
     @Persisted var title: String
     @Persisted var text: String
-}
-
-protocol ToDoObject: Identifiable, Hashable {
-    var id: UUID { get set }
-    var text: String { get set }
-    var title: String { get set }
 }

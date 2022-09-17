@@ -19,7 +19,6 @@ extension CoreDataToDoObject: ToDoObject {
     @NSManaged public var id: UUID
     @NSManaged public var title: String
     @NSManaged public var text: String
-
 }
 
 extension CoreDataToDoObject : Identifiable {
