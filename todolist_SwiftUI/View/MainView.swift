@@ -40,7 +40,7 @@ struct MainView: View {
     
     @ViewBuilder var picker: some View {
             Section {
-                Picker(selection: $viewModel.currentType) {
+                Picker(selection: $viewModel.currentType.animation()) {
                     ForEach(viewModel.savingTypes, id: \.self) {
                         Text($0)
                     }
