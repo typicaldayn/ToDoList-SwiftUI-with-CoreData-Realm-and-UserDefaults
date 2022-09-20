@@ -10,6 +10,4 @@ import Foundation
 import CoreData
 
 
-public class CoreDataToDoObject: NSManagedObject {
-
-}
+public class CoreDataToDoObject: NSManagedObject {}

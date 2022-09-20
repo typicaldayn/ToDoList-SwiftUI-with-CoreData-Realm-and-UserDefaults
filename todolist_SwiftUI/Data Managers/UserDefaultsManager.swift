@@ -9,7 +9,7 @@ import Foundation
 
 class UserDefaultsManager: DataManager {
     
-    @Published private var userDefaultsObjects: [UserDefaultsToDoObject] = [] {
+    private var userDefaultsObjects: [UserDefaultsToDoObject] = [] {
         didSet {
             saveUDObjects()
         }
@@ -20,8 +20,8 @@ class UserDefaultsManager: DataManager {
     }
     
     
-    func add(object: any ToDoObject) {
-        let newObject = UserDefaultsToDoObject(id: object.id, text: object.text, title: object.title)
+    func add(title: String, description: String) {
+        let newObject = UserDefaultsToDoObject(id: UUID(), text: description, title: title)
         userDefaultsObjects.append(newObject)
     }
     

@@ -9,7 +9,11 @@ import Foundation
 
 
 protocol ToDoObject: Identifiable, Hashable {
+    
     var id: UUID { get set }
+    
     var text: String { get set }
+    
     var title: String { get set }
+    
 }

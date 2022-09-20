@@ -11,7 +11,7 @@ import CoreData
 class CoreDataManager: DataManager {
     
     private let container: NSPersistentContainer
-    @Published private var coreDataObjects: [CoreDataToDoObject] = [] //Pub here
+    private var coreDataObjects: [CoreDataToDoObject] = []
     
     init() {
         container = NSPersistentContainer(name: "CoreDataModel")
@@ -23,11 +23,11 @@ class CoreDataManager: DataManager {
         loadCoreDataObjects()
     }
     
-    func add(object: any ToDoObject) {
+    func add(title: String, description: String) {
         let newObject = CoreDataToDoObject(context: container.viewContext)
-        newObject.id = object.id
-        newObject.text = object.text
-        newObject.title = object.title
+        newObject.id = UUID()
+        newObject.text = description
+        newObject.title = description
         saveCoreData()
     }
     
@@ -60,7 +60,7 @@ class CoreDataManager: DataManager {
         do {
             coreDataObjects = try container.viewContext.fetch(request)
         } catch let error {
-            fatalError("Error fetching: \(error.localizedDescription)")
+            print("Error fetching: \(error.localizedDescription)")
         }
     }
     

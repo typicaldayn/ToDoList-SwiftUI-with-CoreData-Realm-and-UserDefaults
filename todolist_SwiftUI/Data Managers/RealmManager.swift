@@ -12,11 +12,11 @@ class RealmManager: DataManager {
     
     @ObservedResults(RealmToDoObject.self) private var realmObjets
     
-    func add(object: any ToDoObject) {
+    func add(title: String, description: String) {
         let newObject = RealmToDoObject()
-        newObject.title = object.title
-        newObject.text = object.text
-        newObject.id = object.id
+        newObject.title = title
+        newObject.text = description
+        newObject.id = UUID()
         _realmObjets.append(newObject)
     }
     

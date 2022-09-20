@@ -4,7 +4,7 @@
 //
 //  Created by Stas Bezhan on 16.09.2022.
 //
-import RealmSwift
+
 import SwiftUI
 
 struct MainView: View {
@@ -17,16 +17,14 @@ struct MainView: View {
                 picker
                 list
             }
-            .navigationTitle(viewModel.currentType)
-            .alert("Save to \(viewModel.currentType)", isPresented: $viewModel.alertPresenting, actions: {
+            .navigationTitle(viewModel.currentType.rawValue)
+            .alert("Save to \(viewModel.currentType.rawValue)",
+                   isPresented: $viewModel.alertPresenting,
+                   actions: {
                 TextField("Title", text: $viewModel.title)
                 TextField("Text", text: $viewModel.text)
                 Button("Save", role: .cancel) {
-                    let newObject = AbstractObject(id: UUID(), text: viewModel.text, title: viewModel.title)
-                    viewModel.dataManager.add(object: newObject)
-                    viewModel.setObjects()
-                    viewModel.text = ""
-                    viewModel.title = ""
+                    viewModel.addNewObject()
                 }
                 Button("Cancel", role: .destructive) {
                     viewModel.alertPresenting.toggle()
@@ -38,11 +36,11 @@ struct MainView: View {
         }
     }
     
-    @ViewBuilder var picker: some View {
+    var picker: some View {
             Section {
                 Picker(selection: $viewModel.currentType.animation()) {
                     ForEach(viewModel.savingTypes, id: \.self) {
-                        Text($0)
+                        Text($0.rawValue)
                     }
                 } label: {
                     Text("Saving type")
@@ -56,7 +54,7 @@ struct MainView: View {
         }
     }
     
-    @ViewBuilder var list: some View {
+    var list: some View {
         Section {
             List {
                 ForEach(viewModel.objects, id: \.hashValue) { object in
@@ -69,20 +67,19 @@ struct MainView: View {
                     .multilineTextAlignment(.leading)
                 }
                 .onDelete(perform: { index in
-                    viewModel.dataManager.delete(at: index)
-                    viewModel.setObjects()
+                    viewModel.delete(at: index)
                 })
             }
         } header: {
             HStack {
-                Text("Objects of \n \(viewModel.currentType)")
+                Text("Objects of \n \(viewModel.currentType.rawValue)")
                     .multilineTextAlignment(.center)
                 Spacer()
                 Button {
                     print(viewModel.objects)
                     viewModel.alertPresenting.toggle()
                 } label: {
-                    Text("New item to \n \(viewModel.currentType)")
+                    Text("New item to \n \(viewModel.currentType.rawValue)")
                         .font(.caption)
                         .fontWeight(.regular)
                         .multilineTextAlignment(.center)

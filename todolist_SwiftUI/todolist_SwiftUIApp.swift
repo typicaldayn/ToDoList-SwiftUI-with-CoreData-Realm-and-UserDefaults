@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct todolist_SwiftUIApp: App {
+    
     var body: some Scene {
         WindowGroup {
             MainView()

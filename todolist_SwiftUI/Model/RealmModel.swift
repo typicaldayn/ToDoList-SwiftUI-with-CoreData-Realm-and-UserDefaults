@@ -11,6 +11,9 @@ import RealmSwift
 class RealmToDoObject: Object, ToDoObject {
     
     @Persisted var id: UUID
+    
     @Persisted var title: String
+    
     @Persisted var text: String
+    
 }

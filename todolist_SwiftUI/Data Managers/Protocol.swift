@@ -8,8 +8,12 @@
 import Foundation
 
 protocol DataManager {
-    func add(object: any ToDoObject)
+    
+    func add(title: String, description: String)
+    
     func delete(at offset: IndexSet)
+    
     func fetchObjects(completion: @escaping ([any ToDoObject]) -> ())
+    
 }
  
