@@ -13,6 +13,7 @@
 		BE5EA2EA28D4D5AE002D5A72 /* CoreDataToDoObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EA2E828D4D5AE002D5A72 /* CoreDataToDoObject+CoreDataClass.swift */; };
 		BE5EA2EB28D4D5AE002D5A72 /* CoreDataToDoObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EA2E928D4D5AE002D5A72 /* CoreDataToDoObject+CoreDataProperties.swift */; };
 		BE5EA2ED28D4ECCD002D5A72 /* UserDefaultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EA2EC28D4ECCD002D5A72 /* UserDefaultsModel.swift */; };
+		BE6D9AAB28DCACC400F8DE5A /* todolist_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6D9AAA28DCACC400F8DE5A /* todolist_SwiftUITests.swift */; };
 		BE9B5BF328D46F1F0088486D /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9B5BF228D46F1F0088486D /* RealmModel.swift */; };
 		BED42F7C28D5EFB600DFBA4E /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED42F7B28D5EFB600DFBA4E /* Protocol.swift */; };
 		BED42F7E28D5F24800DFBA4E /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED42F7D28D5F24800DFBA4E /* RealmManager.swift */; };
@@ -26,11 +27,23 @@
 		BEEBCEBB28D44EFD004AE84B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEBCEBA28D44EFD004AE84B /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BE6D9AAC28DCACC400F8DE5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEEBCE9E28D44E80004AE84B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEEBCEA528D44E80004AE84B;
+			remoteInfo = todolist_SwiftUI;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		BE5EA2E628D4D56A002D5A72 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		BE5EA2E828D4D5AE002D5A72 /* CoreDataToDoObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataToDoObject+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BE5EA2E928D4D5AE002D5A72 /* CoreDataToDoObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataToDoObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BE5EA2EC28D4ECCD002D5A72 /* UserDefaultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsModel.swift; sourceTree = "<group>"; };
+		BE6D9AA828DCACC400F8DE5A /* todolist_SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = todolist_SwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE6D9AAA28DCACC400F8DE5A /* todolist_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todolist_SwiftUITests.swift; sourceTree = "<group>"; };
 		BE9B5BF228D46F1F0088486D /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		BED42F7B28D5EFB600DFBA4E /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		BED42F7D28D5F24800DFBA4E /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
@@ -46,6 +59,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BE6D9AA528DCACC300F8DE5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BEEBCEA328D44E80004AE84B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE6D9AA928DCACC400F8DE5A /* todolist_SwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BE6D9AAA28DCACC400F8DE5A /* todolist_SwiftUITests.swift */,
+			);
+			path = todolist_SwiftUITests;
+			sourceTree = "<group>";
+		};
 		BE9B5BEB28D46E130088486D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				BEEBCEA828D44E80004AE84B /* todolist_SwiftUI */,
+				BE6D9AA928DCACC400F8DE5A /* todolist_SwiftUITests */,
 				BEEBCEA728D44E80004AE84B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				BEEBCEA628D44E80004AE84B /* todolist_SwiftUI.app */,
+				BE6D9AA828DCACC400F8DE5A /* todolist_SwiftUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,6 +169,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BE6D9AA728DCACC300F8DE5A /* todolist_SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE6D9AB028DCACC400F8DE5A /* Build configuration list for PBXNativeTarget "todolist_SwiftUITests" */;
+			buildPhases = (
+				BE6D9AA428DCACC300F8DE5A /* Sources */,
+				BE6D9AA528DCACC300F8DE5A /* Frameworks */,
+				BE6D9AA628DCACC300F8DE5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE6D9AAD28DCACC400F8DE5A /* PBXTargetDependency */,
+			);
+			name = todolist_SwiftUITests;
+			productName = todolist_SwiftUITests;
+			productReference = BE6D9AA828DCACC400F8DE5A /* todolist_SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		BEEBCEA528D44E80004AE84B /* todolist_SwiftUI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BEEBCEB428D44E81004AE84B /* Build configuration list for PBXNativeTarget "todolist_SwiftUI" */;
@@ -170,6 +218,10 @@
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					BE6D9AA728DCACC300F8DE5A = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = BEEBCEA528D44E80004AE84B;
+					};
 					BEEBCEA528D44E80004AE84B = {
 						CreatedOnToolsVersion = 14.0;
 					};
@@ -192,11 +244,19 @@
 			projectRoot = "";
 			targets = (
 				BEEBCEA528D44E80004AE84B /* todolist_SwiftUI */,
+				BE6D9AA728DCACC300F8DE5A /* todolist_SwiftUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BE6D9AA628DCACC300F8DE5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BEEBCEA428D44E80004AE84B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -209,6 +269,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BE6D9AA428DCACC300F8DE5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE6D9AAB28DCACC400F8DE5A /* todolist_SwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BEEBCEA228D44E80004AE84B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -231,7 +299,57 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BE6D9AAD28DCACC400F8DE5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEEBCEA528D44E80004AE84B /* todolist_SwiftUI */;
+			targetProxy = BE6D9AAC28DCACC400F8DE5A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		BE6D9AAE28DCACC400F8DE5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "sdox.com.todolist-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/todolist_SwiftUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/todolist_SwiftUI";
+			};
+			name = Debug;
+		};
+		BE6D9AAF28DCACC400F8DE5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "sdox.com.todolist-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/todolist_SwiftUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/todolist_SwiftUI";
+			};
+			name = Release;
+		};
 		BEEBCEB228D44E81004AE84B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -413,6 +531,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BE6D9AB028DCACC400F8DE5A /* Build configuration list for PBXNativeTarget "todolist_SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE6D9AAE28DCACC400F8DE5A /* Debug */,
+				BE6D9AAF28DCACC400F8DE5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BEEBCEA128D44E80004AE84B /* Build configuration list for PBXProject "todolist_SwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
