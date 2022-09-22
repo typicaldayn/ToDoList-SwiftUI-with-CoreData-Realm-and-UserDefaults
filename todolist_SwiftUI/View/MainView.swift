@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     
-    @StateObject var viewModel = ViewModel()
+    @StateObject var viewModel = MainViewModel()
     
     var body: some View {
         NavigationView {
@@ -23,10 +23,10 @@ struct MainView: View {
                    actions: {
                 TextField("Title", text: $viewModel.title)
                 TextField("Text", text: $viewModel.text)
-                Button("Save", role: .cancel) {
+                Button("Save", role: .none) {
                     viewModel.addNewObject()
                 }
-                Button("Cancel", role: .destructive) {
+                Button("Cancel", role: .none) {
                     viewModel.alertPresenting.toggle()
                 }
             }, message: {
@@ -46,9 +46,6 @@ struct MainView: View {
                     Text("Saving type")
                 }
                 .pickerStyle(.segmented)
-                .onChange(of: viewModel.currentType, perform: { _ in
-                    viewModel.changeDataManager()
-                })
             } header: {
                 Text("Select saving type")
         }

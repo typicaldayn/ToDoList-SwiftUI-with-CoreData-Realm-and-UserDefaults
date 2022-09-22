@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import SwiftUI
 
-@MainActor class ViewModel: ObservableObject {
+
+class MainViewModel: ObservableObject {
     
     enum DataBaseTypes: String {
         
@@ -19,7 +21,11 @@ import Foundation
         
     }
     
-    @Published var currentType = DataBaseTypes.realm
+    @Published var currentType = DataBaseTypes.realm {
+        didSet {
+            changeDataManager()
+        }
+    }
     @Published var savingTypes: [DataBaseTypes] = [.realm, .coreData, .userDefaults]
     @Published var alertPresenting = false
     @Published var title = ""
@@ -37,7 +43,7 @@ import Foundation
         getObjects()
     }
     
-    func changeDataManager() {
+    private func changeDataManager() {
         switch currentType {
         case DataBaseTypes.realm:
             dataManager = RealmManager()
