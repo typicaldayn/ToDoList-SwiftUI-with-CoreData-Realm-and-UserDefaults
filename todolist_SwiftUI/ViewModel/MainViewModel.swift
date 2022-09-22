@@ -50,12 +50,6 @@ import Foundation
         }
     }
     
-    private func getObjects() {
-        dataManager.fetchObjects { toDoObjectsArray in
-            self.objects = toDoObjectsArray
-        }
-    }
-    
     func addNewObject() {
         dataManager.add(title: title, description: text)
         getObjects()
@@ -68,5 +62,10 @@ import Foundation
         getObjects()
     }
    
+    private func getObjects() {
+        dataManager.fetchObjects { toDoObjectsArray in
+            self.objects = toDoObjectsArray
+        }
+    }
     
 }
