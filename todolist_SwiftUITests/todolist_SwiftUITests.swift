@@ -57,7 +57,6 @@ final class todolist_SwiftUITests: XCTestCase {
     
     func test_MainViewModel_deleteAt_shouldDelete() {
         let viewModel = MainViewModel()
-        
         let count = viewModel.objects.count
         viewModel.addNewObject()
         viewModel.delete(at: IndexSet(integer: viewModel.objects.count - 1))
