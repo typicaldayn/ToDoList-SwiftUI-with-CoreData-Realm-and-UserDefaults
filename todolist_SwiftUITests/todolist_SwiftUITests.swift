@@ -7,16 +7,27 @@
 @testable import todolist_SwiftUI
 import XCTest
 
-final class todolist_SwiftUITests: XCTestCase {
+//SUT
 
+final class todolist_SwiftUITests: XCTestCase {
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-
+    
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
+    
+    func test_MainViewModel_dataManager_shouldNotBeNil() {
+        //Given
+        let sut = MainViewModel()
+        //When
+        
+        //Then
+        XCTAssertNotNil(sut.dataManager)
+    }
+    
     func test_MainViewModel_dataManager_shouldBeUserDefaults() {
         //Given
         let viewModel = MainViewModel()
@@ -25,7 +36,7 @@ final class todolist_SwiftUITests: XCTestCase {
         //Then
         XCTAssert(viewModel.dataManager is UserDefaultsManager)
     }
-
+    
     func test_MainViewModel_dataManager_shouldBeCoreData() {
         //Given
         let viewModel = MainViewModel()
@@ -47,8 +58,9 @@ final class todolist_SwiftUITests: XCTestCase {
     func test_MainView_dataManager_shouldSaveObjects() {
         //Given
         let viewModel = MainViewModel()
-        //When
+        viewModel.dataManager = MocDataManager()
         viewModel.objects = []
+        //When
         viewModel.addNewObject()
         //Then
         XCTAssertTrue(!viewModel.objects.isEmpty)
@@ -56,13 +68,24 @@ final class todolist_SwiftUITests: XCTestCase {
     }
     
     func test_MainViewModel_deleteAt_shouldDelete() {
+        //Given
         let viewModel = MainViewModel()
-        let count = viewModel.objects.count
+        viewModel.dataManager = MocDataManager()
+        let countOfObjects = viewModel.objects.count
+        //When
         viewModel.addNewObject()
-        viewModel.delete(at: IndexSet(integer: viewModel.objects.count - 1))
-        
-        XCTAssertTrue(viewModel.objects.count == count)
-        
+        viewModel.delete(at: IndexSet(integer: countOfObjects))
+        //Then
+        XCTAssertTrue(viewModel.objects.count == 0)
+    }
+    
+    func test_MainViewModel_alert_shouldBePresented() {
+        //Given
+        let sut = MainViewModel()
+        //When
+        sut.alertPresenting.toggle()
+        //Then
+        XCTAssertTrue(sut.alertPresenting)
     }
     
 }
