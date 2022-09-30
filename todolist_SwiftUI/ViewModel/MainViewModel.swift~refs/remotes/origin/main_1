@@ -1,0 +1,63 @@
+//
+//  MainView-ViewModel.swift
+//  todolist_SwiftUI
+//
+//  Created by Stas Bezhan on 16.09.2022.
+//
+
+import Foundation
+
+@MainActor class ViewModel: ObservableObject {
+    
+    @Published var currentType = Types.realm
+    @Published var savingTypes = [Types.realm, Types.coreData, Types.userDefaults]
+    @Published var alertPresenting = false
+    @Published var title = ""
+    @Published var text = ""
+    
+    @Published var objects: [any ToDoObject] = []
+    @Published var dataManager: (any DataManager) = RealmManager() {
+        didSet {
+            setObjects()
+        }
+    }
+    
+    func changeDataManager() {
+        switch currentType {
+        case Types.realm:
+            dataManager = RealmManager()
+        case Types.coreData:
+            dataManager = CoreDataManager()
+        case Types.userDefaults:
+            dataManager = UserDefaultsManager()
+        default:
+            print("Error while changed data manager")
+        }
+    }
+    
+    private func setObjects() {
+        dataManager.fetchObjects { toDoObjectsArray in
+            self.objects = toDoObjectsArray
+        }
+    }
+    
+    func addNewObject() {
+        let newObject = AbstractObject(id: UUID(),
+                                       text: text,
+                                       title: title)
+        dataManager.add(object: newObject)
+        setObjects()
+        text = ""
+        title = ""
+    }
+    
+    func delete(at offset: IndexSet) {
+        dataManager.delete(at: offset)
+        setObjects()
+    }
+    
+    init() {
+        setObjects()
+    }
+    
+}
