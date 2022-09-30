@@ -73,7 +73,6 @@ struct MainView: View {
                     .multilineTextAlignment(.center)
                 Spacer()
                 Button {
-                    print(viewModel.objects)
                     viewModel.alertPresenting.toggle()
                 } label: {
                     Text("New item to \n \(viewModel.currentType.rawValue)")
@@ -88,7 +87,6 @@ struct MainView: View {
             }
         }
     }
-    
 }
 
 struct MainView_Previews: PreviewProvider {
