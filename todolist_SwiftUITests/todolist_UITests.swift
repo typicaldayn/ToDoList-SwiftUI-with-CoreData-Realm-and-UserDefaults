@@ -29,18 +29,6 @@ final class todolist_UITests: XCTestCase {
         XCTAssertEqual(value2, "User Defaults")
     }
     
-//    func test_MainView_AddButton() throws {
-//
-//        let sut = MainView()
-//        var alertPresenting = sut.viewModel.$alertPresenting
-//
-//        let addButton = try sut.inspect().navigationView().form(0).section(1).header().hStack(0).button(2)
-//        try addButton.tap()
-//
-//        XCTAssert(alertPresenting) //????????? idk
-//          Docs methods with "Alert" are deprecated
-//    }
-    
     func test_MainView_ListElements() throws {
         
         let sut = MainView()
@@ -73,17 +61,10 @@ final class todolist_UITests: XCTestCase {
         let textObjectsOf = try header.hStack().text(0).string()
         let spacer = try header.hStack().spacer(1)
         let button = try header.hStack().button(2)
-//        let cornerRadius = try button.cornerRadius()
-//        let buttonLabelColor = try button.foregroundColor()
-//        let buttonLabelFont = try button.font()
     
         XCTAssertTrue(textObjectsOf == "Objects of \n\(sut.viewModel.currentType.rawValue)")
         XCTAssertNotNil(spacer)
         XCTAssertNotNil(button)
-//        XCTAssertTrue(cornerRadius == 10)
-//        XCTAssertTrue(buttonLabelColor == .white)
-//        XCTAssertTrue(buttonLabelFont == .caption)
-        
     }
     
 }
