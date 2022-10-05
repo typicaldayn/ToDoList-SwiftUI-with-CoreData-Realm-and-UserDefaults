@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE0493AC28DDCAC600007022 /* todolist_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0493AB28DDCAC600007022 /* todolist_SwiftUITests.swift */; };
+		BE0493AC28DDCAC600007022 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0493AB28DDCAC600007022 /* MainViewModelTests.swift */; };
 		BE0493B628DDCB3600007022 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = BE0493B528DDCB3600007022 /* Realm */; settings = {ATTRIBUTES = (Required, ); }; };
 		BE0493B828DDCB3600007022 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BE0493B728DDCB3600007022 /* RealmSwift */; };
 		BE4F3BE328E31EBF008D8BF0 /* MocDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F3BE228E31EBF008D8BF0 /* MocDataManager.swift */; };
@@ -20,7 +20,7 @@
 		BE9B5BF328D46F1F0088486D /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9B5BF228D46F1F0088486D /* RealmModel.swift */; };
 		BEB855F128DCEBA6007CFB7B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = BEB855F028DCEBA6007CFB7B /* Realm */; };
 		BEB855F328DCEBA6007CFB7B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BEB855F228DCEBA6007CFB7B /* RealmSwift */; };
-		BEC25C6E28E459150070A0C3 /* todolist_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC25C6D28E459150070A0C3 /* todolist_UITests.swift */; };
+		BEC25C6E28E459150070A0C3 /* MainViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC25C6D28E459150070A0C3 /* MainViewTests.swift */; };
 		BED42F7C28D5EFB600DFBA4E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED42F7B28D5EFB600DFBA4E /* DataManager.swift */; };
 		BED42F7E28D5F24800DFBA4E /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED42F7D28D5F24800DFBA4E /* RealmManager.swift */; };
 		BED42F8028D5F3A500DFBA4E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED42F7F28D5F3A500DFBA4E /* CoreDataManager.swift */; };
@@ -44,7 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BE0493AB28DDCAC600007022 /* todolist_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todolist_SwiftUITests.swift; sourceTree = "<group>"; };
+		BE0493AB28DDCAC600007022 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		BE4F3BE228E31EBF008D8BF0 /* MocDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MocDataManager.swift; sourceTree = "<group>"; };
 		BE4F3BE428E362AA008D8BF0 /* MocToDoObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MocToDoObject.swift; sourceTree = "<group>"; };
 		BE58B9B728E4958800F13D63 /* todolist_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todolist_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,7 +54,7 @@
 		BE5EA2E928D4D5AE002D5A72 /* CoreDataToDoObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataToDoObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BE5EA2EC28D4ECCD002D5A72 /* UserDefaultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsModel.swift; sourceTree = "<group>"; };
 		BE9B5BF228D46F1F0088486D /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
-		BEC25C6D28E459150070A0C3 /* todolist_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todolist_UITests.swift; sourceTree = "<group>"; };
+		BEC25C6D28E459150070A0C3 /* MainViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTests.swift; sourceTree = "<group>"; };
 		BED42F7B28D5EFB600DFBA4E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		BED42F7D28D5F24800DFBA4E /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		BED42F7F28D5F3A500DFBA4E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -100,8 +100,8 @@
 		BE0493AA28DDCAC600007022 /* todolist_SwiftUITests */ = {
 			isa = PBXGroup;
 			children = (
-				BE0493AB28DDCAC600007022 /* todolist_SwiftUITests.swift */,
-				BEC25C6D28E459150070A0C3 /* todolist_UITests.swift */,
+				BE0493AB28DDCAC600007022 /* MainViewModelTests.swift */,
+				BEC25C6D28E459150070A0C3 /* MainViewTests.swift */,
 				BE4F3BE028E31E86008D8BF0 /* Helper */,
 			);
 			path = todolist_SwiftUITests;
@@ -332,9 +332,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE4F3BE528E362AA008D8BF0 /* MocToDoObject.swift in Sources */,
-				BE0493AC28DDCAC600007022 /* todolist_SwiftUITests.swift in Sources */,
+				BE0493AC28DDCAC600007022 /* MainViewModelTests.swift in Sources */,
 				BE4F3BE328E31EBF008D8BF0 /* MocDataManager.swift in Sources */,
-				BEC25C6E28E459150070A0C3 /* todolist_UITests.swift in Sources */,
+				BEC25C6E28E459150070A0C3 /* MainViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

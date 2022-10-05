@@ -12,9 +12,9 @@ import SwiftUI
 
 extension MainView: Inspectable { }
 
-final class todolist_UITests: XCTestCase {
+final class MainViewTests: XCTestCase {
 
-    func test_pickerValues() throws {
+    func test_MainView_pickerValues() throws {
         
         let sut = MainView()
         let picker = try sut.inspect().navigationView().form(0).section(0).picker(0)
@@ -28,7 +28,7 @@ final class todolist_UITests: XCTestCase {
         XCTAssertEqual(value2, "User Defaults")
     }
     
-    func test_MainView_ListElements() throws {
+    func test_MainView_listElements() throws {
         
         let sut = MainView()
         sut.viewModel.dataManager = MocDataManager()
@@ -52,7 +52,7 @@ final class todolist_UITests: XCTestCase {
         
     }
     
-    func test_MainView_Header() throws {
+    func test_MainView_headerElements() throws {
         
         let sut = MainView()
         let header = try sut.inspect().navigationView().form(0).section(1).header()

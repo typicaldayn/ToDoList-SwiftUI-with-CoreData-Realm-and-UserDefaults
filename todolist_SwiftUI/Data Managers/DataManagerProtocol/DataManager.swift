@@ -16,4 +16,3 @@ protocol DataManager {
     func fetchObjects(completion: @escaping ([any ToDoObject]) -> ())
     
 }
- 
