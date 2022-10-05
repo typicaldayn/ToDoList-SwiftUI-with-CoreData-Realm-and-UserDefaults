@@ -20,63 +20,59 @@ final class todolist_SwiftUITests: XCTestCase {
     }
     
     func test_MainViewModel_dataManager_shouldNotBeNil() {
-        //Given
         let sut = MainViewModel()
-        //When
-        
-        //Then
         XCTAssertNotNil(sut.dataManager)
     }
     
     func test_MainViewModel_dataManager_shouldBeUserDefaults() {
         //Given
-        let viewModel = MainViewModel()
+        let sut = MainViewModel()
         //When
-        viewModel.currentType = viewModel.savingTypes[2]
+        sut.currentType = sut.savingTypes[2]
         //Then
-        XCTAssert(viewModel.dataManager is UserDefaultsManager)
+        XCTAssert(sut.dataManager is UserDefaultsManager)
     }
     
     func test_MainViewModel_dataManager_shouldBeCoreData() {
         //Given
-        let viewModel = MainViewModel()
+        let sut = MainViewModel()
         //When
-        viewModel.currentType = viewModel.savingTypes[1]
+        sut.currentType = sut.savingTypes[1]
         //Then
-        XCTAssert(viewModel.dataManager is CoreDataManager)
+        XCTAssert(sut.dataManager is CoreDataManager)
     }
     
     func test_MainViewModel_dataManager_shouldBeRealmManager() {
         //Given
-        let viewModel = MainViewModel()
+        let sut = MainViewModel()
         //When
-        viewModel.currentType = viewModel.savingTypes[0]
+        sut.currentType = sut.savingTypes[0]
         //Then
-        XCTAssert(viewModel.dataManager is RealmManager)
+        XCTAssert(sut.dataManager is RealmManager)
     }
     
     func test_MainView_dataManager_shouldSaveObjects() {
         //Given
-        let viewModel = MainViewModel()
-        viewModel.dataManager = MocDataManager()
-        viewModel.objects = []
+        let sut = MainViewModel()
+        sut.dataManager = MocDataManager()
+        sut.objects = []
         //When
-        viewModel.addNewObject()
+        sut.addNewObject()
         //Then
-        XCTAssertTrue(!viewModel.objects.isEmpty)
-        XCTAssertGreaterThan(viewModel.objects.count, 0)
+        XCTAssertTrue(!sut.objects.isEmpty)
+        XCTAssertGreaterThan(sut.objects.count, 0)
     }
     
     func test_MainViewModel_deleteAt_shouldDelete() {
         //Given
-        let viewModel = MainViewModel()
-        viewModel.dataManager = MocDataManager()
-        let countOfObjects = viewModel.objects.count
+        let sut = MainViewModel()
+        sut.dataManager = MocDataManager()
+        let countOfObjects = sut.objects.count
         //When
-        viewModel.addNewObject()
-        viewModel.delete(at: IndexSet(integer: countOfObjects))
+        sut.addNewObject()
+        sut.delete(at: IndexSet(integer: countOfObjects))
         //Then
-        XCTAssertTrue(viewModel.objects.count == 0)
+        XCTAssertTrue(sut.objects.count == 0)
     }
     
     func test_MainViewModel_alert_shouldBePresented() {
